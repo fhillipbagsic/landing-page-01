@@ -1,0 +1,83 @@
+@import "./container.scss";
+@import "../mixins.scss";
+
+.testimonial {
+  background: $text-gray-200;
+  padding: 60px 0;
+  &__content {
+    @include container;
+  }
+
+  &__title {
+    font: $heading-h2;
+    margin-bottom: 8px;
+  }
+
+  &__subtitle {
+    font: $lead-1;
+  }
+
+  &__container {
+    display: flex;
+    margin-top: 40px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    max-width: 350px;
+    text-align: center;
+    position: relative;
+    margin-bottom: 20px;
+    &_background {
+      background: white;
+      border-radius: 10px;
+      box-shadow: $grey-shadow;
+      padding: 25px 20px;
+    }
+
+    &_background::after {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 0;
+      height: 0;
+
+      border-left: 8px solid transparent;
+      border-right: 8px solid transparent;
+      border-top: 16px solid white;
+
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      bottom: 140px;
+      box-shadow: $grey-shadow;
+    }
+
+    &_title {
+      font: $heading-h5;
+      margin-bottom: 10px;
+    }
+
+    &_description {
+      font: $body-2;
+    }
+
+    &_image {
+      margin-top: 40px;
+    }
+
+    &_name {
+      font: $subtitle-1;
+      margin: 8px 0;
+    }
+
+    &_subname {
+      font: $body-2;
+    }
+  }
+
+  @include breakpoint(tablet-portrait) {
+    text-align: center;
+  }
+}

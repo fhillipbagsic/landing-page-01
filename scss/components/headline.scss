@@ -1,0 +1,49 @@
+@import "./container.scss";
+@import "../mixins.scss";
+
+.headline {
+  @include container;
+  position: relative;
+  &__content {
+    color: white;
+    background: $brand-purple;
+    margin: 150px 0;
+    padding: 40px 48px;
+    border-radius: 16px;
+
+    &_title {
+      font: $heading-h3;
+    }
+
+    &_description {
+      font: $lead-1;
+      width: 50%;
+      line-height: 32px;
+      margin: 32px 0;
+    }
+
+    &_button {
+      font: $label-large;
+    }
+
+    &_button::after {
+      content: "->";
+      position: absolute;
+      display: inline-block;
+      margin-left: 8px;
+    }
+  }
+
+  &__image {
+    position: absolute;
+    width: 30%;
+    right: 100px;
+    top: -150px;
+    //  box-shadow: $mobile-mockup-shadow;
+  }
+  @include breakpoint(tablet-portrait) {
+    &__content_description {
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,28 @@
+@import "./variables.scss";
+
+@mixin breakpoint($bp) {
+  // 600px mobile phone
+  @if $bp == phone {
+    @media (max-width: $phone-max-width) {
+      @content;
+    }
+  }
+  // 840px tablet portrait
+  @if $bp == tablet-portrait {
+    @media (max-width: $tablet-portrait-max-width) {
+      @content;
+    }
+  }
+  // 1040px tablet landscape
+  @if $bp == tablet-landscape {
+    @media (max-width: $tablet-landscape-max-width) {
+      @content;
+    }
+  }
+  // 1400px desktop
+  @if $bp == desktop {
+    @media (min-width: $desktop-min-width) {
+      @content;
+    }
+  }
+}

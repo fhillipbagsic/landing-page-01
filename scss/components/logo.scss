@@ -1,0 +1,12 @@
+@import "./container.scss";
+
+.logo {
+  @include container;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  padding: 45px 0;
+  & > img {
+    margin: 24px 32px;
+  }
+}

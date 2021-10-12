@@ -1,0 +1,49 @@
+@import "./container.scss";
+
+.footer {
+  background: black;
+  color: white;
+
+  &__content {
+    @include container;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+
+  &__logo {
+    margin-bottom: 30px;
+  }
+
+  &__list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    &_item {
+      font: $body-1;
+      margin-right: 24px;
+      margin-bottom: 10px;
+      cursor: pointer;
+    }
+  }
+
+  &__copyright {
+    font: $body-2;
+    color: $text-gray-300;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+
+  &__right {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__subtitle {
+    font: $subtitle-2;
+    color: $text-gray-300;
+  }
+}

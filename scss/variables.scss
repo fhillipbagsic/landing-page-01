@@ -1,0 +1,48 @@
+// Breakpoints
+$phone-max-width: 600px;
+$tablet-portrait-max-width: 840px;
+$tablet-landscape-max-width: 1040px;
+$desktop-min-width: 1400px;
+
+// Font
+$font: Inter;
+
+// Heading
+$heading-h1: 800 72px $font;
+$heading-h2: 800 48px $font;
+$heading-h3: 800 40px $font;
+$heading-h4: 700 28px $font;
+$heading-h5: 600 24px $font;
+$heading-h6: 500 20px $font;
+
+// Subtitle
+$subtitle-1: 700 18px $font;
+$subtitle-2: 500 18px $font;
+
+// Lead
+$lead-1: 400 18px $font;
+$lead-2: 500 14px $font;
+
+$body-1: 400 16px $font;
+$body-2: 400 14px $font;
+
+// Others
+$capitalized: 700 14px $font;
+
+// Label
+$label-small: 500 12px $font;
+$label-medium: 500 14px $font;
+$label-large: 500 16px $font;
+
+// Color
+$text-gray-900: #18191f;
+$text-gray-300: #d9dbe1;
+$text-gray-200: #eeeff4;
+$brand-purple: #8c30f5;
+$brand-turquoise: #2ec5ce;
+$brand-turquoise-100: #d5fafc;
+
+// Shadow
+$dark-shadow: 0 10px 20px rgba(41, 41, 42, 0.07);
+$grey-shadow: 0 30px 40px rgba(212, 217, 232, 0.2);
+$mobile-mockup-shadow: 10px 15px 30px rgba(41, 41, 42, 0.5);

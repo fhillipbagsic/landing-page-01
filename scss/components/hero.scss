@@ -1,0 +1,56 @@
+@import "../components/container.scss";
+@import "../mixins.scss";
+
+.hero {
+  background: url("../../assets/hero-background.png");
+  background-size: cover;
+  background-position: center;
+  &__content {
+    @include container;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+  }
+  &__heading {
+    font: $heading-h1;
+    margin-bottom: 32px;
+  }
+
+  &__button {
+    background: $brand-purple;
+    color: white;
+    padding: 12px 32px;
+    border-radius: 6px;
+    margin-bottom: 230px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  &__button:hover {
+    transform: translateY(-2px);
+  }
+
+  &__image {
+    height: 80%;
+    width: auto;
+  }
+
+  @include breakpoint(tablet-landscape) {
+    &__content {
+      flex-direction: column;
+      text-align: center;
+      height: auto;
+      margin-top: 40px;
+    }
+    &__heading {
+      font: $heading-h2;
+      margin-top: 20px;
+    }
+
+    &__button {
+      margin-bottom: 10px;
+    }
+  }
+}

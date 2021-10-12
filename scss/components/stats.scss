@@ -1,0 +1,54 @@
+@import "./container.scss";
+@import "../mixins.scss";
+
+.stats {
+  @include container;
+  display: flex;
+  align-items: center;
+  padding: 90px 0px;
+  &__heading {
+    flex: 1;
+
+    &_title {
+      font: $heading-h2;
+      margin-bottom: 8px;
+    }
+
+    &_description {
+      font: $lead-1;
+    }
+  }
+
+  &__count {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+    gap: 30px;
+
+    &_item {
+      min-width: 200px;
+    }
+
+    &_item > img {
+      float: left;
+    }
+
+    &_item > h4 {
+      font: $heading-h4;
+    }
+
+    &_item > p {
+      font: $body-1;
+    }
+  }
+
+  @include breakpoint(tablet-portrait) {
+    flex-direction: column;
+    text-align: center;
+    &__count {
+      margin-top: 30px;
+    }
+  }
+}

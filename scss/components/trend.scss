@@ -1,0 +1,55 @@
+@import "./container.scss";
+@import "../mixins.scss";
+
+.trend {
+  @include container;
+  z-index: 2;
+  display: grid;
+  grid-template-areas:
+    "title description"
+    "image image";
+  padding: 45px 10px;
+
+  &__title {
+    grid-area: title;
+    font: $heading-h3;
+    max-width: 540px;
+    //  flex: 1;
+  }
+
+  &__description {
+    grid-area: description;
+    font: $lead-1;
+    max-width: 540px;
+    //  flex: 1;
+  }
+
+  &__image {
+    margin-top: 40px;
+    width: 190%;
+    grid-area: "image";
+  }
+  @include breakpoint(tablet-landscape) {
+    text-align: center;
+
+    grid-template-areas:
+      "title"
+      "description"
+      "image";
+
+    &__title {
+      max-width: 95%;
+      margin-bottom: 10px;
+    }
+
+    &__description {
+      max-width: 95%;
+      margin-bottom: 20px;
+    }
+
+    &__image {
+      margin-top: 20px;
+      width: 100%;
+    }
+  }
+}
